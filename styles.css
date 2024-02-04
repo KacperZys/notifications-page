@@ -1,0 +1,88 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: hsl(219, 14%, 63%);
+}
+
+body {
+    background: hsl(210, 60%, 98%);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main__menu {
+    display: flex;
+    align-items: center;
+    padding: 1.2em;
+}
+
+.main__h1 {
+    font-size: 1.5rem;
+    color: hsl(224, 21%, 14%);
+}
+
+.main__btn-read {
+    float: right;
+    width: 10%;
+    background: white;
+}
+
+.main__img-icon {
+    width: 4rem;
+    margin: 0 1.5em;
+}
+
+.main__notifications-count {
+    background: hsl(219, 85%, 26%);
+    width: 7%;
+    color: white;
+}
+
+.main__notification {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    padding: 1.5em;
+    font-size: 1.2rem;
+}
+
+.main__text {
+    margin: 0.5em;
+}
+
+.dark-blue-font {
+    color: hsl(219, 12%, 42%);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.position-under {
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
+}
+
+.border-gray {
+    border: 1px solid gray;
+    padding: 1.5em;
+}
