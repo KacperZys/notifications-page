@@ -19,11 +19,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 50%;
 }
 
 .main {
     background: white;
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -34,14 +34,16 @@ body {
 }
 
 .main__h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: hsl(224, 21%, 14%);
+    margin: 0 0.6em;
 }
 
 .main__btn-read {
-    float: right;
     width: 10%;
     background: white;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .main__img-icon {
@@ -51,21 +53,31 @@ body {
 
 .main__notifications-count {
     background: hsl(219, 85%, 26%);
-    width: 7%;
+    width: 3%;
+    text-align: center;
     color: white;
+    font-size: 1.5rem;
+}
+
+.main__notifications-div {
+    padding: 4em;
 }
 
 .main__notification {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
     text-align: left;
+    flex-wrap: wrap;
     position: relative;
-    padding: 1.5em;
+    width: 90%;
+    padding: 2em;
     font-size: 1.2rem;
 }
 
 .main__text {
     margin: 0.5em;
+    flex-grow: 3;
 }
 
 .dark-blue-font {
@@ -76,13 +88,23 @@ body {
     font-weight: 700;
 }
 
-.position-under {
+.wrap {
+    display: block;
+}
+
+.position-under-right {
     position: absolute;
-    bottom: 5px;
-    left: 30px;
+    bottom: -4em;
+    right: -1.5em;
+    width: 3rem;
 }
 
 .border-gray {
-    border: 1px solid gray;
-    padding: 1.5em;
+    border: 1px solid hsl(205, 33%, 90%);
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.align-right {
+    margin-left: auto;
 }
