@@ -14,23 +14,20 @@ body {
     background: hsl(210, 60%, 98%);
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-}
 
 .main {
+    width: 50%;
     background: white;
-    margin: 0 auto;
+    margin: 5% auto;
+    line-height: 1.8em;
+    border-radius: 30px;
 }
 
 .main__menu {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 1.2em;
+    padding-bottom: 0;
 }
 
 .main__h1 {
@@ -40,10 +37,11 @@ body {
 }
 
 .main__btn-read {
-    width: 10%;
+    width: 15%;
     background: white;
     font-size: 1.1rem;
     cursor: pointer;
+    margin-right: 1em;
 }
 
 .main__img-icon {
@@ -61,6 +59,7 @@ body {
 
 .main__notifications-div {
     padding: 4em;
+    padding-top: 1em;
 }
 
 .main__notification {
@@ -68,10 +67,10 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    flex-wrap: wrap;
     position: relative;
     width: 90%;
-    padding: 2em;
+    margin: 2em;
+    padding: 1.3em;
     font-size: 1.2rem;
 }
 
@@ -89,14 +88,22 @@ body {
 }
 
 .wrap {
-    display: block;
+    position: absolute;
+    bottom: 0.8em;
+    left: 9em;
 }
 
 .position-under-right {
     position: absolute;
-    bottom: -4em;
+    bottom: -6em;
     right: -1.5em;
     width: 3rem;
+}
+
+.position-left {
+    position: absolute;
+    bottom: -2.5em;
+    left: 33em;
 }
 
 .border-gray {
@@ -107,4 +114,54 @@ body {
 
 .align-right {
     margin-left: auto;
+}
+
+.unread {
+    background: hsl(211, 68%, 94%);
+    border: 1px solid hsl(219, 14%, 63%);
+    border-radius: 15px;
+    transition: background-color 2s ease-in-out;
+    animation: blink linear 1.5s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.read {
+    background: hsl(211, 68%, 94%);
+}
+
+.unread::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: hsl(1, 90%, 64%);
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+@-webkit-keyframes blink {
+
+    0%,
+    50% {
+        background: hsl(211, 68%, 94%);
+    }
+
+    60%,
+    80% {
+        background: hsl(212, 15%, 77%);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        background: hsl(211, 68%, 94%);
+    }
+
+    60%,
+    80% {
+        background: hsl(212, 15%, 77%);
+    }
 }
