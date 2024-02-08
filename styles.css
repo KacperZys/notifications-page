@@ -26,20 +26,20 @@ body {
 .main__menu {
     display: flex;
     align-items: flex-end;
-    padding: 1.2em;
+    padding: 1.5em;
     padding-bottom: 0;
 }
 
 .main__h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: hsl(224, 21%, 14%);
-    margin: 0 0.6em;
+    margin-right: 0.3em
 }
 
 .main__btn-read {
     width: 15%;
     background: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     margin-right: 1em;
 }
@@ -47,19 +47,20 @@ body {
 .main__img-icon {
     width: 4rem;
     margin: 0 1.5em;
+    display: block;
 }
 
 .main__notifications-count {
     background: hsl(219, 85%, 26%);
-    width: 3%;
+    width: 20px;
     text-align: center;
     color: white;
     font-size: 1.5rem;
 }
 
 .main__notifications-div {
-    padding: 4em;
-    padding-top: 1em;
+    padding: 2em;
+    padding-top: 0;
 }
 
 .main__notification {
@@ -70,7 +71,7 @@ body {
     position: relative;
     width: 90%;
     margin: 2em;
-    padding: 1.3em;
+    padding: 1.1em;
     font-size: 1.2rem;
 }
 
@@ -89,22 +90,16 @@ body {
 
 .wrap {
     position: absolute;
-    bottom: 0.8em;
+    bottom: 0.3em;
     left: 9em;
 }
 
 .position-under-right {
     position: absolute;
-    bottom: -6em;
-    right: -1.5em;
-    width: 3rem;
+    bottom: -4em;
+    width: 3.5rem;
 }
 
-.position-left {
-    position: absolute;
-    bottom: -2.5em;
-    left: 33em;
-}
 
 .border-gray {
     border: 1px solid hsl(205, 33%, 90%);
@@ -120,8 +115,6 @@ body {
     background: hsl(211, 68%, 94%);
     border: 1px solid hsl(219, 14%, 63%);
     border-radius: 15px;
-    transition: background-color 2s ease-in-out;
-    animation: blink linear 1.5s infinite ease-in-out;
     cursor: pointer;
 }
 
@@ -131,37 +124,60 @@ body {
 
 .unread::after {
     content: '';
-    height: 20px;
-    width: 20px;
+    height: 1.3rem;
+    width: 1.3rem;
     background-color: hsl(1, 90%, 64%);
     border-radius: 50%;
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 30px;
 }
 
-@-webkit-keyframes blink {
-
-    0%,
-    50% {
-        background: hsl(211, 68%, 94%);
+@media (max-width: 1400px) {
+    :root {
+        font-size: 12px;
     }
 
-    60%,
-    80% {
-        background: hsl(212, 15%, 77%);
+    .unread::after {
+        right: 5px;
+    }
+
+    .wrap {
+        bottom: 0.1em;
+    }
+
+    .position-under-right {
+        right: -50px;
     }
 }
 
-@keyframes blink {
-
-    0%,
-    50% {
-        background: hsl(211, 68%, 94%);
+@media (max-width: 850px) {
+    :root {
+        font-size: 14px;
     }
 
-    60%,
-    80% {
-        background: hsl(212, 15%, 77%);
+    .main__notification {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wrap {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 11px;
+    }
+
+    .wrap {
+        font-size: 0.8em;
+    }
+
+    .main__menu {
+        padding: 0.5em;
     }
 }
